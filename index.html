@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>demosaii — music, stories, links</title>
+<meta name="description" content="demosaii — Korean fusion music that tells stories. HANPAN, JOSEON STORIES, BTS animations, HAJIMA! and the tools I build. All links in one place.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0b0a0f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="demosaii">
+<meta property="og:title" content="demosaii — music, stories, links">
+<meta property="og:description" content="HANPAN · JOSEON STORIES · HAJIMA! · everything demosaii, in one place.">
+<meta property="og:image" content="https://demosaii-links.vercel.app/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@demosaii">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0a0f'/%3E%3Ccircle cx='32' cy='32' r='15' fill='%23e7bd5c'/%3E%3C/svg%3E">
+<!-- Google Analytics 4 — replace G-9JEZM2LDKZ with the Measurement ID of the demosaii.com data stream -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9JEZM2LDKZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9JEZM2LDKZ');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+  :root{
+    --bg:#0b0a0f; --tile:#16131d; --line:#2a2533; --ink:#f3eee3; --muted:#8e8779; --soft:#b8b0a2;
+    --gold:#e7bd5c; --tangerine:#ff8f3f;
+    --army-bg:#ebe5fb; --army-ink:#2b1d6b; --army-mid:#5a4aa0; --army-line:#c9bfee; --army-accent:#4a35a8;
+    --kr:'Noto Sans KR',sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Bricolage Grotesque','Noto Sans KR',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.4}
+  a{color:inherit;text-decoration:none}
+  .kr{font-family:var(--kr)}
+  .page{max-width:480px;margin:0 auto;padding:28px 20px 40px;display:flex;flex-direction:column;gap:14px}
+  @media (min-width:720px){.page{padding-top:56px}}
+
+  header{display:flex;flex-direction:column;gap:6px;padding:8px 4px 14px}
+  .brand{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+  h1{margin:0;font-size:40px;font-weight:800;letter-spacing:-.03em;line-height:1}
+  .tag{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .lede{margin:0;font-size:16px;line-height:1.5;color:var(--soft);font-weight:500}
+  .lede .kr{color:var(--muted)}
+  .jump{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+  .jump a{display:inline-flex;align-items:center;gap:6px;min-height:34px;padding:0 12px;border-radius:999px;border:1px solid #2a2533;background:var(--tile);font-size:13px;font-weight:600;color:var(--soft);transition:border-color .15s ease,color .15s ease}
+  .jump a .kr{font-size:12px;color:var(--muted);font-weight:500}
+  .jump a:hover{border-color:var(--gold);color:var(--ink)}
+  html{scroll-behavior:smooth}
+  [id]{scroll-margin-top:16px}
+
+  .tile{background:var(--tile);border-radius:22px}
+  .hero{padding:16px;display:flex;flex-direction:column;gap:14px}
+  .hero-top{display:flex;align-items:center;gap:16px}
+  .hero img{width:128px;height:128px;flex:none;border-radius:12px;display:block;object-fit:contain;background:#000}
+  .hero-text{display:flex;flex-direction:column;gap:5px;min-width:0}
+  .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .eyebrow .kr{letter-spacing:.1em}
+  .hero h2{margin:0;font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1}
+  .title-row{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+  .title-row .kr{font-size:18px;font-weight:700;color:#cfc6b5}
+  .meta{font-size:12px;color:var(--muted);letter-spacing:.06em}
+  .btns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:12px;font-weight:700;font-size:15px;transition:transform .15s ease,opacity .15s ease}
+  .btn:hover{transform:translateY(-1px)}
+  .btn:active{transform:translateY(0);opacity:.9}
+  .btn-gold{background:var(--gold);color:#15110a}
+  .btn-ghost{border:1.5px solid #3a3446;color:var(--ink)}
+
+  .section{padding:22px 20px 10px;display:flex;flex-direction:column;gap:6px}
+  .head{display:flex;align-items:baseline;justify-content:space-between;gap:8px;padding-bottom:10px}
+  h3{margin:0;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
+  .head .kr{font-size:12px;color:var(--muted)}
+  .row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;border-top:1px solid var(--line);min-height:48px;transition:opacity .15s ease}
+  .row:hover{color:var(--gold)}
+  .row .t{display:flex;flex-direction:column;gap:2px}
+  .row .n{font-size:17px;font-weight:600}
+  .row .s{font-size:13px;color:var(--muted)}
+  .row svg{flex:none}
+
+  .world{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:10px -8px 10px;padding:16px;border-radius:14px;background:#1f2a26;border:1px solid #2f3d37;min-height:48px;transition:border-color .15s ease}
+  .world:hover{border-color:#8fb3a3}
+  .world .t{display:flex;flex-direction:column;gap:3px}
+  .world .e{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8fb3a3;font-weight:700}
+  .world .n{font-size:18px;font-weight:700;line-height:1.2}
+  .world .n .kr{font-weight:500;color:#cfc6b5}
+  .world .s{font-size:13px;color:#9fb5ab}
+
+  .army{background:var(--army-bg);color:var(--army-ink);border:1.5px solid var(--army-accent);border-radius:22px;padding:22px 20px 16px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}
+  .army .deco{position:absolute;right:-22px;top:44px}
+  .army h3{color:var(--army-accent)}
+  .army .head .kr{color:var(--army-mid)}
+  .army .big{display:flex;flex-direction:column;gap:4px;padding-right:80px}
+  .army .hajima{font-size:52px;font-weight:800;letter-spacing:-.03em;line-height:.95}
+  .army .hajima span{color:#e86a1e}
+  .army .sub{font-size:15px;font-weight:600}
+  .army .desc{font-size:13px;color:var(--army-mid);line-height:1.5}
+  .army .btn-play{background:var(--army-accent);color:#f4f0ff;font-weight:800;letter-spacing:.04em}
+  .army .btn-play .kr{letter-spacing:0}
+  .army .row{border-top-color:var(--army-line);padding:12px 0;color:var(--army-ink)}
+  .army .row:last-child{padding-bottom:2px}
+  .army .row:hover{color:var(--army-accent)}
+  .army .row .s{color:var(--army-mid)}
+  .code{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;padding:5px 10px;border-radius:8px;border:1.5px dashed #e86a1e;background:#fff4ea;color:var(--army-ink);font-size:13px;margin-top:4px}
+  .code .l{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#c2520f;font-weight:700}
+  .code .c{font-weight:800;letter-spacing:.08em}
+  .code .o{color:var(--army-mid)}
+
+  .follow{display:flex;flex-direction:column;gap:10px;padding:8px 4px}
+  .pills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .pill{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:999px;border:1.5px solid #3a3446;font-weight:600;font-size:14px;transition:border-color .15s ease,color .15s ease}
+  .pill:hover{border-color:var(--gold);color:var(--gold)}
+
+  .learn{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px;min-height:48px}
+  .learn .t{display:flex;flex-direction:column;gap:3px}
+  .learn .n{font-size:17px;font-weight:600}
+  .learn .s{font-size:13px;color:var(--muted)}
+  .learn .han{font-family:var(--kr);font-size:34px;font-weight:700;color:var(--gold);line-height:1}
+  .learn:hover .n{color:var(--gold)}
+
+  footer{padding:18px 4px 0;display:flex;justify-content:space-between;font-size:12px;color:#6f6a62;letter-spacing:.04em}
+  footer .kr{display:inline-flex;align-items:center;gap:5px}
+  a.btn:active,a.row:active,a.pill:active,a.world:active,a.learn:active{transform:scale(.985)}
+  a.row,a.pill,a.world,a.learn{transition:transform .12s ease,color .15s ease,border-color .15s ease}
+  @media (prefers-reduced-motion:reduce){.btn,.row,.pill,.world,.learn{transition:none}.btn:hover,a:active{transform:none}}
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header>
+    <div class="brand">
+      <h1>demosaii</h1>
+    </div>
+    <p class="lede">Music that tells stories. <span class="kr">이야기가 되는 음악.</span></p>
+    <nav class="jump" aria-label="Sections">
+      <a href="#music">Music <span class="kr">음악</span></a>
+      <a href="#army">ARMY <span class="kr">아미</span></a>
+      <a href="#follow">Follow <span class="kr">팔로우</span></a>
+      <a href="#tools">Tools <span class="kr">도구</span></a>
+      <a href="#learn">Korean <span class="kr">한글</span></a>
+    </nav>
+  </header>
+
+  <section class="tile hero" aria-label="New album: HANPAN">
+    <div class="hero-top">
+      <img src="hanpan-cover.jpg" width="128" height="128" alt="HANPAN album cover — a half-wooden, half-neon Korean mask under a full moon">
+      <div class="hero-text">
+        <div class="eyebrow">New album · <span class="kr">새 앨범</span></div>
+        <div class="title-row"><h2>HANPAN</h2><span class="kr">한판</span></div>
+        <div class="meta">GUGAK HOUSE · 8 TRACKS</div>
+      </div>
+    </div>
+    <div class="btns">
+      <a class="btn btn-gold" href="https://open.spotify.com/album/3GwM6Zv6jXXYmTNS1MByUD">Spotify</a>
+      <a class="btn btn-ghost" href="https://music.apple.com/us/album/hanpan/6818791132">Apple Music</a>
+    </div>
+  </section>
+
+  <section class="tile section" id="music" aria-labelledby="h-music">
+    <div class="head"><h3 id="h-music">For music lovers</h3><span class="kr">음악 듣는 분들께</span></div>
+    <a class="row" href="https://open.spotify.com/artist/7gQBjIUase0Y3eCZpi7Vyj">
+      <span class="t"><span class="n">Spotify</span><span class="s">Artist page · <span class="kr">아티스트 페이지</span></span></span>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+    </a>
+    <a class="row" href="https://music.apple.com/us/artist/demosaii/1746293731">
+      <span class="t"><span class="n">Apple Music</span><span class="s">Artist page · <span class="kr">아티스트 페이지</span></span></span>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+    </a>
+    <a class="row" href="https://on.soundcloud.com/Je2lhaoLatmPD6RMf6">
+      <span class="t"><span class="n">SoundCloud</span><span class="s">Nine albums, in order · <span class="kr">아홉 앨범, 순서대로</span></span></span>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+    </a>
+    <a class="row" href="https://www.youtube.com/@demosaii/releases">
+      <span class="t"><span class="n">YouTube</span><span class="s">Every release · <span class="kr">모든 발매곡</span></span></span>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+    </a>
+    <a class="world" href="https://joseon-universe.com">
+      <span class="t">
+        <span class="e">The world</span>
+        <span class="n">JOSEON STORIES <span class="kr">조선 이야기</span></span>
+        <span class="s">36 songs, one story · <span class="kr">서른여섯 곡, 하나의 이야기</span></span>
+      </span>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+    </a>
+  </section>
+
+  <section class="army" id="army" aria-labelledby="h-army">
+    <svg class="deco" aria-hidden="true" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="48" fill="#ff8a3a"/><path d="M60 12c-2 8-1 13 2 18" stroke="#3f7d2f" stroke-width="4" stroke-linecap="round" fill="none"/></svg>
+    <div class="head"><h3 id="h-army">For ARMY</h3><span class="kr">아미에게</span></div>
+    <div class="big">
+      <div class="hajima">HAJIMA<span>!</span></div>
+      <div class="sub">Yoongi's Tangerine Catch</div>
+      <div class="desc">Catch the falling tangerines. Drop five and it's over. <span class="kr">떨어지는 귤을 받아요.</span></div>
+    </div>
+    <a class="btn btn-play" href="https://hajima.vercel.app">PLAY · <span class="kr">플레이</span></a>
+    <a class="row" href="https://www.youtube.com/@demosaii/shorts">
+      <span class="t"><span class="n">BTS animations</span><span class="s">YouTube Shorts · <span class="kr">BTS 애니메이션</span></span></span>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+    </a>
+    <a class="row" href="https://cokodive.com?aff=2787" rel="sponsored">
+      <span class="t">
+        <span class="n">Merch &amp; albums · Cokodive</span>
+        <span class="s">Partner link · <span class="kr">굿즈와 앨범 · 제휴 링크</span></span>
+        <span class="code"><span class="l">Code</span><span class="c">DEMOSARMY10</span><span class="o">· 10% off</span></span>
+      </span>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+    </a>
+  </section>
+
+  <section class="follow" id="follow" aria-labelledby="h-follow">
+    <div class="head" style="padding-bottom:0"><h3 id="h-follow">Follow</h3><span class="kr">팔로우</span></div>
+    <div class="pills">
+      <a class="pill" href="https://www.instagram.com/demosaii" rel="me">Instagram</a>
+      <a class="pill" href="https://www.tiktok.com/@demosaii" rel="me">TikTok</a>
+      <a class="pill" href="https://www.youtube.com/@demosaii" rel="me">YouTube</a>
+    </div>
+  </section>
+
+  <section class="tile section" id="tools" aria-labelledby="h-creators">
+    <div class="head"><h3 id="h-creators">For creators</h3><span class="kr">만드는 사람들에게</span></div>
+    <a class="row" href="https://style-console.vercel.app/">
+      <span class="t"><span class="n">Style Console</span><span class="s">Anime style prompts · <span class="kr">애니 스타일 프롬프트</span></span></span>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+    </a>
+    <a class="row" href="https://suno-prompt-builder-five.vercel.app/">
+      <span class="t"><span class="n">Suno Prompt Builder</span><span class="s">Music prompts, any genre · <span class="kr">수노 음악 프롬프트</span></span></span>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+    </a>
+    <a class="row" href="https://higgsfield.ai?fpr=aya-7568f8" rel="sponsored">
+      <span class="t"><span class="n">Higgsfield</span><span class="s">The AI video tool I use · Partner link · <span class="kr">제휴</span></span></span>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+    </a>
+  </section>
+
+  <a class="tile learn" id="learn" href="https://hangul-blocks.vercel.app/">
+    <span class="t">
+      <span class="eyebrow">Learn Korean · <span class="kr">한글 배우기</span></span>
+      <span class="n">Hangul Blocks</span>
+      <span class="s">Read Korean in 60 minutes. Free.</span>
+    </span>
+    <span class="han" aria-hidden="true">한</span>
+  </a>
+
+  <footer>
+    <span style="display:inline-flex;align-items:center;gap:12px">© 2026 demosaii <span id="views" hidden style="display:inline-flex;align-items:center;gap:5px;color:var(--muted)"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span id="views-n"></span></span></span>
+    <span class="kr">보라해 <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="#8b6cff"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.9 4.5 6.6 4.5c2 0 3.6 1.1 4.4 2.5.8-1.4 2.4-2.5 4.4-2.5 3.7 0 5.7 3.9 4.2 7.3C19.5 16.4 12 21 12 21z"/></svg></span>
+  </footer>
+
+</main>
+<script>
+(function(){
+  // Tap feedback: a short vibration where the device supports it (Android),
+  // and a soft "tick" sound everywhere else. Both fire on press, before navigation.
+  var ctx = null;
+  function tick(){
+    try{
+      ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+      if(ctx.state === 'suspended') ctx.resume();
+      var t = ctx.currentTime;
+      var o = ctx.createOscillator(), g = ctx.createGain();
+      o.type = 'sine';
+      o.frequency.setValueAtTime(1400, t);
+      o.frequency.exponentialRampToValueAtTime(700, t + 0.05);
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(0.12, t + 0.004);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + 0.06);
+      o.connect(g).connect(ctx.destination);
+      o.start(t); o.stop(t + 0.07);
+    }catch(e){}
+  }
+  function buzz(){
+    try{ if(navigator.vibrate) navigator.vibrate(12); }catch(e){}
+  }
+  document.addEventListener('pointerdown', function(e){
+    var a = e.target.closest && e.target.closest('a[href]');
+    if(!a || a.closest('.jump')) return;
+    buzz(); tick();
+    // Analytics: one event per outbound tap — which link, in which section.
+    try{
+      var sec = a.closest('[id]');
+      var name = (a.querySelector('.n') || a).textContent.replace(/\s+/g,' ').trim().slice(0,60);
+      gtag('event', 'link_click', {
+        link_name: name,
+        link_url: a.href,
+        section: sec ? sec.id : 'hero',
+        transport_type: 'beacon'
+      });
+    }catch(err){}
+  }, {passive:true});
+
+  // Visible view counter: counts one visit per browser session, shows the total in the footer.
+  try{
+    var seen = sessionStorage.getItem('v');
+    fetch('/api/views' + (seen ? '?peek=1' : ''))
+      .then(function(r){ return r.json(); })
+      .then(function(j){
+        if(typeof j.views !== 'number') return;
+        try{ sessionStorage.setItem('v','1'); }catch(e){}
+        document.getElementById('views-n').textContent = j.views.toLocaleString('en-US') + ' visits · 방문';
+        document.getElementById('views').hidden = false;
+      }).catch(function(){});
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
